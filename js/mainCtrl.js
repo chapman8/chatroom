@@ -7,7 +7,7 @@ app.controller('mainCtrl', function($scope, parseService){
   //your controllers $scope as messages ($scope.messages)
   $scope.getParseData = function () {
     parseService.getData().then(function(res) {
-      console.log($scope.messages);
+      console.log(res); // run function at this point and look at the res to know how to write the next line. what info we need.
       $scope.messages = res.data.results;
     });
   }
